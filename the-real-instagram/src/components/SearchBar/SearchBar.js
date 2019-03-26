@@ -5,16 +5,16 @@ import heart from '../../assets/heart.svg';
 import compass from '../../assets/compass.svg';
 import user from '../../assets/user.svg';
  
-const SearchBar = () => {
+const SearchBar = props => {
   return (
     <div style={barWrapper}>
       <div style={imgWrapper}>
         <img alt='camera' src={cameraLogo} style={social}/>
         <img alt="instagram logo" src={iglogo} style={logoImg} />
       </div>
-      <div>
-        <input style={search} type="text" placeholder= "Search" />
-      </div>
+      <form onSubmit = {(e)=>props.submit(e)}>
+        <input onChange = {(e)=>props.change(e)} style={search} type="text" placeholder= "Search" value = {props.value}/>
+      </form>
       <div style={socialWrapper}>
         <div style={social}>
         <img alt='compass' src={compass} className="logo" />
@@ -32,7 +32,7 @@ const SearchBar = () => {
 
 
 const barWrapper = {
-    borderBottom: '1px solid #3333',
+    borderBottom: '1px solid gray',
     background: '#ffffff',
     display: 'flex',
     justifyContent: 'space-between',

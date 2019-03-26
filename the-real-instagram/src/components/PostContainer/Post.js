@@ -1,8 +1,7 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
-import heart from '../../assets/heart.svg';
-import message from '../../assets/message.svg';
+
 import './Posts.css';
 
 const Post = props => {
@@ -19,12 +18,8 @@ const Post = props => {
               src={props.post.imageUrl}
             />
           </div>
-          <div className='post-interface'>
-          <img className='logo' alt='heart' src={heart}/>
-          <img className='logo' alt='message icon' src={message}/>
-            
-          </div>
-          <CommentSection comments={props.post.comments} />
+          
+          <CommentSection comments={props.post.comments} likes={props.post.likes} />
         </div>
       );
     };
