@@ -19,11 +19,11 @@ const login = () => {
 
 const Login = () => {
     return(
-        <div>
+        <div className="div">
         <form className="login" onSubmit = {login}>
-        <h3>Login</h3>
-        <input type = "text" placeholder = "username" onChange = {(e)=>getUser(e)}/>
-        <input type = "text" placeholder = "password" onChange = {(e)=>getPwd(e)}/>
+        <h3 className="h3">Login</h3>
+        <input className="input" type = "text" placeholder = "username" onChange = {(e)=>getUser(e)}/>
+        <input className="input" type = "text" placeholder = "password" onChange = {(e)=>getPwd(e)}/>
         <input className="button" type = "submit" value = "submit" />
         </form>
         </div>
