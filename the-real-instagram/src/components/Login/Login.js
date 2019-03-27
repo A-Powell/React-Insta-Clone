@@ -22,8 +22,8 @@ const Login = () => {
         <div className="div">
         <form className="login" onSubmit = {login}>
         <h3 className="h3">Login</h3>
-        <input className="input" type = "text" placeholder = "username" onChange = {(e)=>getUser(e)}/>
-        <input className="input" type = "text" placeholder = "password" onChange = {(e)=>getPwd(e)}/>
+        <input className="input" type = "text" placeholder = "username" onChange = {getUser}/>
+        <input className="input" type = "text" placeholder = "password" onChange = {getPwd}/>
         <input className="button" type = "submit" value = "submit" />
         </form>
         </div>
