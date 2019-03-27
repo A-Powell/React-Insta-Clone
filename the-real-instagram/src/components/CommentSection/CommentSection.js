@@ -58,12 +58,10 @@ commentHandler = event => {
 
 handleCommentSubmit = e => {
   e.preventDefault();
-  const newComment = { text: this.state.comment, username: 'AustinPowell'};
+  const newComment = { text: this.state.comment, username: localStorage.getItem('username')};
   const comments = this.state.comments.slice();
   comments.push(newComment);
   this.setState({ comments, comment: ''});
-  setTimeout(() => {
-  }, 500);
 };
 
 
