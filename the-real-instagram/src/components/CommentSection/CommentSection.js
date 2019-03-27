@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
-import heart from '../../assets/heart.svg';
 import message from '../../assets/message.svg';
  import './comment.css'
 

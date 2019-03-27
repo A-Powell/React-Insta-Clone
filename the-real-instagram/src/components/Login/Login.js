@@ -23,7 +23,7 @@ const Login = () => {
         <form className="login" onSubmit = {login}>
         <h3 className="h3">Login</h3>
         <input className="input" type = "text" placeholder = "username" onChange = {getUser}/>
-        <input className="input" type = "text" placeholder = "password" onChange = {getPwd}/>
+        <input className="input" type = "password" placeholder = "password" onChange = {getPwd}/>
         <input className="button" type = "submit" value = "submit" />
         </form>
         </div>
