@@ -1,9 +1,17 @@
 import React from 'react';
- 
+import styled from 'styled-components';
+
+const Submit = styled.input`
+  border: 1px solid white;
+  padding: 15px 5px;
+  width: 93%;
+  border-Top: 1px solid #EEEEEE;
+`;
+
 const CommentInput = props => {
   return (
     <form onSubmit={props.submitComment}>
-      <input style={submit}
+      <Submit
       type="text" 
       placeholder="Add a comment... " 
       value={props.comment}
@@ -16,9 +24,3 @@ const CommentInput = props => {
 export default CommentInput;
 
 
-const submit = {
-  border: '1px solid white',
-  padding: '15px 5px',
-  width: '93%',
-  borderTop: '1px solid #EEEEEE'
-}

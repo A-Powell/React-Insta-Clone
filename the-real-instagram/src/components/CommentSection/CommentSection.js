@@ -4,6 +4,20 @@ import Comment from './Comment';
 import CommentInput from './CommentInput';
 import message from '../../assets/message.svg';
  import './comment.css'
+import styled from 'styled-components';
+
+const Like = styled.div`  
+  font-weight: bold;
+  display: flex;
+  margin-left: 12px;
+`;
+
+const PostInterface = styled.div`
+  display: flex;
+  padding: 5px;
+`;
+
+
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -67,15 +81,15 @@ handleCommentSubmit = e => {
   render(props) {
     return (
       <div>
-        <div className='post-interface'>
+        <PostInterface>
         <span onClick = {this.toggleLike} className ={`heart-size fa style ${this.state.notLiked ?  '' : ' red'}`} >
 &#xf08a;
 </span>
           <img  alt='message icon' src={message}/>
-          </div>
-          <div className = 'like'>
+          </PostInterface>
+          <Like>
             {this.state.likes} likes
-          </div>
+          </Like>
         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
         <CommentInput  
         comment={this.state.comment}

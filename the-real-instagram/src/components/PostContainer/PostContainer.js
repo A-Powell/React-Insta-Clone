@@ -1,12 +1,12 @@
 import React from 'react';
 import Post from './Post';
-import './Posts.css';
+import {PostsContainerWrapper} from './PostStyles';
 
 const PostContainer = props => {
   return (
-    <div className="posts-container-wrapper">
+    <PostsContainerWrapper>
       {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
-    </div>
+    </PostsContainerWrapper>
   );
 };
 

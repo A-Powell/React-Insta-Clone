@@ -5,11 +5,6 @@ font-size: 21px;
 cursor: pointer;
 }
 
-.like  {
-    font-weight: bold;
-    display: flex;
-    margin-left: 12px;
-  }
 
   .red {
       color: red;

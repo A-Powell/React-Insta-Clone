@@ -47,7 +47,7 @@ constructor() {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <SearchBar submit={this.findPost} change={this.search} value={this.state.value}/>
         <PostContainer posts={this.state.data} />
       </div>

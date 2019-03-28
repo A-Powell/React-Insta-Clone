@@ -1,26 +1,24 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
-
-import './Posts.css';
+import {PostBorder, PostImageWrapper, PostImage} from './PostStyles';
 
 const Post = props => {
     return (
-        <div className="post-border">
+        <PostBorder>
           <PostHeader
             username={props.post.username}
             thumbnailUrl={props.post.thumbnailUrl}
           />
-          <div className="post-image-wrapper">
-            <img
+          <PostImageWrapper>
+            <PostImage
               alt="post thumbnail"
-              className="post-image"
               src={props.post.imageUrl}
             />
-          </div>
+          </PostImageWrapper>
           
           <CommentSection comments={props.post.comments} likes={props.post.likes} />
-        </div>
+        </PostBorder>
       );
     };
 
